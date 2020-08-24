@@ -6,7 +6,8 @@ class Game {
     }
 
     startGame() {
-
+        const overlay = document.querySelector('#overlay');
+        overlay.style.display = 'hidden';
     }
 
     /**
