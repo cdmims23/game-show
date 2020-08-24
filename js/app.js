@@ -1,3 +1,1 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * app.js */
+const startBtn = document.querySelector('#btn_reset');
