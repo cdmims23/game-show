@@ -18,17 +18,34 @@ class Phrase {
                 listItem.classList.add('hide');
                 listItem.classList.add('letter');
                 listItem.classList.add(this.phrase[i]);
-                listItem.textContent = `${this.phrase[i]};`
+                listItem.textContent = `${this.phrase[i]}`;
             }
             parentElement.appendChild(listItem);
         }
     }
 
-    checkLetter() {
-
+    /**
+      * Checks if passed letter is in phrase
+      * @param (string) letter - Letter to check
+    */
+    checkLetter(letter) {
+        if(this.phrase.includes(letter)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    showMatchedLetter() {
-
+    /**
+      * Displays passed letter on screen after a match is found
+      * @param (string) letter - Letter to display
+    */
+    showMatchedLetter(letter) {
+        const letters = document.querySelectorAll(`.${letter}`);
+        console.log('showMatchedLetter function has been called');
+        for(let i = 0; i < letters.length; i++) {
+            letters[i].classList.add('show');
+            letters[i].classList.remove('hide');
+        }
     }
 }
